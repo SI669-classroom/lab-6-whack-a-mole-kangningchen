@@ -33,7 +33,7 @@ export class LeaderboardPage {
     console.log('ionViewDidLoad LeaderboardPage');
     // Platform.ready isn't required in the new Ionic
     this.platform.ready().then(() => {
-      this.storage.get((result) => {
+      this.storage.get('leaderboard').then((result) => {
         let res;
         if(!result) {
           res = []
